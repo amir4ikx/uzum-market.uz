@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Корзина - Uzum</title>
+
+	<link rel="icon" href="img/uzum-icon.svg">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="preloader__element"></div>
+	</div>
+	@@include('./blocks/download-mobile.html')
+	@@include('./blocks/header.html')
+	@@include('./blocks/sign-in.html')
+	<div class="scroll__top scroll__top-hide"></div>
+
+	<main class="bag hide">
+
+		<div class="container">
+
+			<h6 class="bag__title section__title">Ваша корзина,&nbsp;<span class="bag__title-number"></span>&nbsp;<span class="bag__title-goods"></span></h6>
+
+			<div class="bag__inner">
+
+				<section class="bag__cards"></section>
+
+				<aside class="bag__checkout-wrap">
+
+					<div class="bag__checkout">
+
+						<h4 class="bag__checkout-title">Бесплатно доставим ваш заказ <br><span>в фирменный пункт выдачи</span></h4>
+
+						<div class="bag__checkout-line"></div>
+
+						<h6 class="bag__checkout-order">Ваш заказ</h6>
+
+						<div class="bag__checkout-info">
+							<span class="bag__checkout-info--goods thin__text"></span>
+							<span class="bag__checkout-info--price thin__text"></span>
+						</div>
+
+						<div class="bag__checkout-date">
+							Доставка (Завтра)
+						</div>
+
+						<div class="bag__checkout-overall">
+							<span class="thin__text">Итого:</span>
+
+							<div class="bag__checkout-overall--price">
+								<span class="overall__price"></span>
+
+								<span class="overall__save">Вы экономите: <span
+										class="overall__save-number"></span></span>
+							</div>
+						</div>
+
+						<button class="bag__checkout-button">Перейти к оформлению</button>
+					</div>
+
+				</aside>
+
+			</div>
+
+		</div>
+
+	</main>
+
+
+	<section class="bag__empty">
+
+		<div class="container bag__empty-container">
+
+			<img class="bag__empty-img" src="https://uzum.uz/static/img/shopocat.490a4a1.png">
+
+			<h4 class="bag__empty-title section__title">В корзине пока нет товаров</h4>
+
+			<p class="bag__empty-subtitle section__card-title">Начните с подборок на главной странице или найдите нужный
+				товар через поиск</p>
+
+			<a class="bag__empty-btn favourite__empty-button" href="index.html">На главную</a>
+		</div>
+
+	</section>
+
+	@@include('./blocks/footer.html')
+
+	<script src="js/bag.bundle.js"></script>
+</body>
+
+</html>

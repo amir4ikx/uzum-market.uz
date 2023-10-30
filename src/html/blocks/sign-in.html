@@ -1,0 +1,88 @@
+<div class="sign-in">
+
+    <div class="login-error"></div>
+    
+    <div class="sign-in__modal non-active-modal">
+    
+        <img class="sign-in__close" src="img/close.svg" alt="close">
+        <h4 class="sign-in__title">Регистрация</h4>
+        <p class="sign-in__subtitle">Уже есть аккаунт? <span class="sign-in__enter">Войдите</span></p>
+
+        <form class="sign-in__form">
+            <div class="sign-in__form-inputs">
+                <label>
+                    Ваше Имя
+                    <input class="sign-in__form-name" type="text" placeholder="Имя" required>
+                </label>
+                
+                <label>
+                    Логин
+                    <input class="sign-in__form-login" type="text" placeholder="Логин" required minlength="8">
+                </label>
+                
+                <label>
+                    Пароль
+                    <input class="sign-in__form-password" type="password" placeholder="Пароль" required minlength="8">
+                </label>
+            </div>
+            
+            <button class="sign-in__btn">Зарегистрироваться</button>
+        </form>
+    
+        <p class="sign-in__rules">Авторизуясь, вы соглашаетесь c <a href="#!">политикой обработки персональных данных</a></p>
+    
+    </div>
+    
+    <div class="log-in__modal">
+    
+        <img class="log-in__close" src="img/close.svg" alt="close">
+        <h4 class="log-in__title">Вход</h4>
+        <p class="log-in__subtitle">Нет аккаунтa? <span class="log-in__enter">Зарегистрируйтесь</span></p>
+
+        <form class="log-in__form">
+            <div class="log-in__form-inputs">
+                
+                <label>
+                    Логин
+                    <input class="log-in__form-login" type="text" placeholder="Логин" required>
+                </label>
+                
+                <label>
+                    Пароль
+                    <input class="log-in__form-password" type="password" placeholder="Пароль" required>
+                </label>
+            </div>
+
+            <button class="log-in__btn">Войти</button>
+        </form>
+    
+        <p class="log-in__rules">Авторизуясь, вы соглашаетесь c <a href="#!">политикой обработки персональных данных</a></p>
+    
+    </div>
+    
+</div>
+
+<div class="authorized authorized__non-active">
+    <div class="container">
+        <img class="authorized__close" src="img/close.svg" alt="close">
+
+        <h2 class="authorized__heading">Ваш аккаунт</h2>
+        
+        <div class="authorized__info">
+            <h4 class="authorized__name"></h4>
+            <p class="authorized__login"></p>
+            
+            <a class="authorized__link" href="bag.html">
+                <span class="authorized__link-text"> Корзина </span>
+                <img class="authorized__link-img" src="img/bag.svg" alt="bag">
+            </a>
+
+            <a class="authorized__link" href="favourite.html">
+                <span class="authorized__link-text"> Избранное </span>
+                <img class="authorized__link-img" src="img/favourite.svg" alt="favourite">
+            </a>
+        </div>
+        
+        <button class="authorized__log-out">Выйти</button>
+    </div>
+</div>

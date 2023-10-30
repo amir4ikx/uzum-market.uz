@@ -1,0 +1,291 @@
+.sign-in,
+.log-in {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    z-index: 100001;
+    opacity: 0;
+    scale: 0;
+    transition: all .5s ease;
+
+    &__modal {
+        padding: 30px 60px;
+        background-color: #fff;
+        border-radius: 4px;
+        transition: all .4s ease;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: all ease .5s;
+
+        @media (max-width: $breakpoint576) {
+            padding: 30px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    &__title {
+        color: #1F1F26;
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 18px;
+        text-align: center;
+    }
+
+    &__subtitle {
+        color: #1F1F26;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        margin: 12px 0;
+        text-align: center;
+
+    }
+
+    &__enter {
+        color: $mainColor;
+        cursor: pointer;
+    }
+
+    &__rules {
+        color: #1F1F26;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18px;
+        margin: 12px 0;
+        text-align: center;
+        max-width: 350px;
+        width: 100%;
+
+        @media (max-width: $breakpoint576) {
+            max-width: 235px;
+            font-size: 14px;
+        }
+    }
+
+    &__form-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            color: #141415;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        input {
+            outline: none;
+            display: block;
+            margin: 0 auto;
+            background-color: #ccc;
+            width: 300px;
+            padding: 10px;
+            transition: all ease .3s;
+
+            @media (max-width: $breakpoint480) {
+                max-width: 235px;
+            }
+        }
+    }
+
+    &__btn {
+        display: block;
+        border-radius: 8px;
+        background: $mainColor;
+        margin: 16px auto 0;
+        padding: 10px 14px;
+        transition: all ease .3s;
+
+        color: #fff;
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: normal;
+
+        &:hover {
+            filter: drop-shadow(0 0 7px $mainColor);
+        }
+    }
+}
+
+.non-active-modal {
+    transform: rotateY(180deg);
+}
+
+.login-error {
+    height: 65px;
+    width: 450px;
+    background-color: #fff;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 20000;
+    top: -70px;
+    transition: all ease .6s;
+    display: grid;
+    place-content: center;
+
+    font-family: Roboto;
+    color: red;
+    text-shadow: 0 0 2px red;
+    font-weight: 400;
+    font-size: 20px;
+
+    &-active {
+        top: 30px;
+        transition: all ease .6s;
+    }
+}
+
+.authorized {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 70%;
+    height: 70vh;
+    background-color: #fff;
+    z-index: 110000;
+    transition: all ease .4s;
+    box-shadow: 0 0 30px 10px #000;
+
+    @media(max-width: $breakpoint992) {
+        left: 40%;
+        height: 100vh;
+    }
+
+    @media (max-width: $breakpoint576) {
+        height: 102vh;
+    }
+    
+    @media (max-width: $breakpoint480) {
+        left: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 40px 30px;
+        height: 80%;
+    }
+
+    &__non-active {
+        right: -200%;
+        left: 200%;
+    }
+
+    &__close {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        cursor: pointer;
+    }
+
+    &__heading {
+        align-self: center;
+
+        font-family: Roboto;
+        font-size: 32px;
+        font-weight: 500;
+
+        @media (max-width: $breakpoint768) {
+            font-size: 26px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    &__name {
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 500;
+
+        @media (max-width: $breakpoint768) {
+            font-size: 20px;
+        }
+    }
+
+    &__login {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 300;
+        color: rgb(104, 104, 104);
+
+        margin-bottom: 20px;
+
+        @media (max-width: $breakpoint768) {
+            font-size: 12px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        position: relative;
+        border-bottom: 1px solid #000;
+
+        &-img {
+            height: 32px;
+
+            @media (max-width: $breakpoint768) {
+                height: 28px;
+            }
+        }
+
+        &-text {
+            font-family: Inter;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 50px;
+            color: #141415;
+
+            @media (max-width: $breakpoint768) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__log-out {
+        padding: 10px 20px;
+        background-color: $mainColor;
+        border-radius: 8px;
+
+        color: #fff;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

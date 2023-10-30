@@ -1,0 +1,233 @@
+.footer {
+    padding: 50px 0 16px;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+
+        @media (max-width: $breakpoint768) {
+            display: block;
+        }
+
+        @media (max-width: $breakpoint992) {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 35px;
+        }
+
+        @media (max-width: $breakpoint768) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__part {
+        @media (max-width: $breakpoint768) {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin-bottom: 16px;
+
+        color: #1F1F26;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        transition: all ease .3s;
+
+        @media (max-width: $breakpoint768) {
+            margin-bottom: 4px;
+            text-align: center;
+        }
+    }
+
+    &__link {
+        display: block;
+        margin-bottom: 19px;
+
+        color: #4D4E59;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        transition: all ease .3s;
+
+        &:hover {
+            filter: drop-shadow(0 0 10px #4d4e59);
+        }
+    }
+
+    &__download {
+        &-icons {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            @media (max-width: $breakpoint992) {
+                gap: 14px;
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            color: #1F1F26;
+            font-family: Inter;
+            font-size: 12.8px;
+            font-weight: 500;
+            line-height: 15.36px;
+            transition: all ease .3s;
+
+            &:hover {
+                filter: drop-shadow(0 0 7px #1F1F26);
+            }
+        }
+
+        @media (max-width: $breakpoint992) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+    }
+
+    &__social {
+        grid-column: 4;
+        grid-row: 2;
+
+        &-icons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            @media (max-width: $breakpoint992) {
+                gap: 8px;
+            }
+        }
+
+        &-img {
+            transition: all ease .3s;
+        }
+
+        @media (max-width: $breakpoint992) {
+            grid-column: 2;
+            grid-row: 2;
+        }
+    }
+
+    &__privacy {
+        padding: 16px 0;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $breakpoint992) {
+            display: block;
+        }
+
+        &-links {
+            display: flex;
+            gap: 16px;
+
+            @media (max-width: $breakpoint992) {
+                display: block;
+            }
+
+            a {
+                @media (max-width: $breakpoint992) {
+                    display: block;
+                    text-align: center;
+                }
+
+                &:hover {
+                    filter: drop-shadow(0 0 7px #000);
+                }
+            }
+        }
+
+        p {
+            @media (max-width: $breakpoint992) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__instagram {
+        &:hover {
+            filter: drop-shadow(0 0 7px #BA00B2);
+            scale: 1.1;
+        }
+    }
+
+    &__telegram {
+        &:hover {
+            filter: drop-shadow(0 0 7px #2AABEE);
+            scale: 1.1;
+        }
+    }
+
+    &__youtube {
+        &:hover {
+            filter: drop-shadow(0 0 7px #FF0000);
+            scale: 1.1;
+        }
+    }
+
+    &__facebook {
+        &:hover {
+            filter: drop-shadow(0 0 7px #3B5998);
+            scale: 1.1;
+        }
+    }
+
+    &__accordeon {
+        display: none;
+
+        @media (max-width: $breakpoint768) {
+            display: block;
+            width: 100%;
+        }
+
+        &-part {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+
+            & * {
+                text-align: center;
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #4D4E59;
+            }
+        }
+
+        &-click {
+            color: #1F1F26;
+            font-family: Roboto;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+
+        &-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all .3s ease;
+        }
+
+        &-link {
+            display: block;
+            color: #4D4E59;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}

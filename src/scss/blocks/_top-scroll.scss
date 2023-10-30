@@ -1,0 +1,30 @@
+.scroll__top {
+    width: 52px;
+    height: 52px;
+    background-color: $mainColor;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1000;
+    transition: all .5s ease;
+    transform: translateY(0px);
+
+    &::before {
+        content: '';
+        height: 20px;
+        width: 20px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        display: block;
+        rotate: -45deg;
+        translate: 0 4px;
+    }
+
+    &-hide {
+        transform: translateY(150px);
+    }
+}

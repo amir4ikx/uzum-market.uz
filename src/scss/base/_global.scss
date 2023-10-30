@@ -1,0 +1,64 @@
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint1450) {
+        max-width: 1200px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint576) {
+        max-width: 560px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+body {
+    &.locked {
+        overflow: hidden !important;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.from-bottom {
+    animation: fromBottomAnimaton .7s;    
+}
+
+@keyframes fromBottomAnimaton {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.opacity-none {
+    opacity: 0 !important;
+}
+
+.green-outline {
+    box-shadow: 0 0 20px green !important;
+}
+
+.red-outline {
+    box-shadow: 0 0 20px red !important;
+}
+

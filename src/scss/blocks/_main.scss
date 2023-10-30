@@ -1,0 +1,21 @@
+main section {
+    @media (max-width: $breakpoint768) {
+        display: none;       
+
+        &.eid__section {
+            display: grid;
+        }    
+    }
+}
+
+.main__slider {
+    margin: 20px 0 50px;
+    
+    @media (max-width: $breakpoint768) {
+        display: none;
+    }
+}
+
+.main__slider * {
+    z-index: 1;
+}

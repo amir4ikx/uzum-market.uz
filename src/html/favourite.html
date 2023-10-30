@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Uzum - Первая в Узбекистане торговая площадка с доставкой товаров на следующий день</title>
+	
+	<link rel="icon" href="img/uzum-icon.svg">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="preloader__element"></div>
+	</div>
+	@@include('./blocks/download-mobile.html')
+	@@include('./blocks/header.html')
+	@@include('./blocks/sign-in.html')
+	<div class="scroll__top scroll__top-hide"></div>
+
+	<main class="favourite__main hide">
+		<div class="container">
+			<h4 class="favourite__title section__title">Мои желания</h4>
+			<hr class="favourite__line section__line">
+			<div class="favourite__cards section__cards"></div>
+		</div>
+	</main>
+	<section class="favourite__empty">
+		<div class="container avourite__empty-container">
+			<img class="favourite__empty-img" src="https://uzum.uz/static/img/hearts.cf414be.png">
+			<h4 class="favourite__empty-title section__title">Добавьте то, что понравилось</h4>
+			<p class="favourite__empty-subtitle section__card-title">Нажмите на <img class="favourite__empty-like" src="img/favourite.svg" alt="favourite"> в товаре. Войдите в аккаунт и всё избранное сохранится</p>
+			<button class="favourite__empty-btn favourite__empty-button">Войти в аккаунт</button>
+			<a class="favourite__empty-btn favourite__toMain-button" style="display: none;" href="index.html">На главную</a>
+		</div>
+	</section>
+
+	@@include('./blocks/footer.html')
+	@@include('./blocks/to-bag.html')
+	<script src="js/favourite.bundle.js"></script>
+</body>
+
+</html>
